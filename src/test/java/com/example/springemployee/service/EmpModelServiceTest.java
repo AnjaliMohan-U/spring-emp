@@ -16,5 +16,16 @@ public class EmpModelServiceTest {
     @InjectMocks
     private EmpModelService empservicemodel;
 
+    @Test
+    public void getAllEmployees(){
+        List<Employee> allEmployees = empservicemodel.getEmployeeList();
+        assertEquals(7,allEmployees.size());
+        assertEquals("ram", allEmployees.get(0).getEmp_name());
+    }
 
+    @Test
+    public void getEmployeeByCountry(){
+        List<Employee> employeeByCountry = empservicemodel.retrieveByCountry("India");
+        assertEquals(4,employeeByCountry.size());
+    }
 }

@@ -24,9 +24,4 @@ public class EmpModelService {
         return employees.stream().filter(emp -> emp.getLoc_id().startsWith(i)).collect(Collectors.toList());
     }
 
-
 }
-//
-//employees.stream().filter(emp -> emp.getLoc_id().startsWith("I")).forEach(emp -> {
-//        System.out
-//        .println("employee id: " + emp.getEmp_id() + " - " + " employee name: " + emp.getEmp_name() + "\n");

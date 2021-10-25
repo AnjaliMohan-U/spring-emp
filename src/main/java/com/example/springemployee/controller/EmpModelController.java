@@ -18,6 +18,10 @@ public class EmpModelController {
     @Autowired
     private EmpModelService empmodelservice;
 
+    public String sayHello(){
+        return "Hi!" + empmodelservice.sayBye();
+    }
+
     @GetMapping("/getAllEmployee")
     List<Employee> getAll(){
         return empmodelservice.getEmployeeList();

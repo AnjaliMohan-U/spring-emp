@@ -24,4 +24,7 @@ public class EmpModelService {
         return employees.stream().filter(emp -> emp.getLoc_id().startsWith(i)).collect(Collectors.toList());
     }
 
+    public String sayBye() {
+        return "Bye!";
+    }
 }
